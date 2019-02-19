@@ -31,7 +31,7 @@ Sphinx.Helper = (function () {
 })();
 
 Sphinx.Login = {
-    currentLanguageCode: 'en-US',
+    currentLanguageCode: 'zh-Hans',
     init: function () {
         Sphinx.Login.browser = Sphinx.Core.detectBrowser();
         Sphinx.Login.cachedDomElements();

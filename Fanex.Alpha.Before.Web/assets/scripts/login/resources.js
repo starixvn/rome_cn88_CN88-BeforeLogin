@@ -91,6 +91,28 @@ Sphinx.Resources = (function () {
     };
     addLanguage(chinese());
 
+    var chineseSimplified = function () {
+        var resource = new Language();
+        resource.Id = 'zh-Hans';
+        resource.Username = '用户名';
+        resource.Flag = 'flag flag-cn';
+        resource.Password = '密码';
+        resource.Language = '简体中文';
+        resource.Captcha = '验证码';
+        resource.ErrorMessage = '';
+        resource.Login = '登入';
+        resource.ShowPassword = '顯示密碼';
+        resource.AutumnTitle = 'textTitle-cn';
+        resource.SignIn = 'SignIn';
+        resource.errUserName = '请输入账号及密码';
+        resource.errValidCode = '您必須輸入正確驗證碼';
+        resource.browserWarning = "您的浏览器已过期，可能无法与我们的网站正常操作。为了提供更好的支援，我们强烈建议您升级至新的版本";
+        resource.updateYourBrowser = "请点击这里以升级您的浏览器";
+
+        return resource;
+    };
+    addLanguage(chineseSimplified());
+
     var japanese = function () {
         var resource = new Language();
         resource.Id = 'ja-JP';
@@ -204,6 +226,8 @@ Sphinx.Resources = (function () {
                     return korean();
                 case 'th-TH':
                     return thailand();
+                case 'zh-Hans':
+                    return chineseSimplified();
             }
 
             return english();

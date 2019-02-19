@@ -225,6 +225,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Labels.vi-VN.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Labels.zh-Hans.Designer.cs">
+      <DependentUpon>Labels.zh-Hans.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Resources\Labels.zh-CN.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -276,6 +281,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Labels.zh-Hans.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.zh-Hans.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Labels.zh-TW.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Labels.zh-TW.Designer.cs</LastGenOutput>
