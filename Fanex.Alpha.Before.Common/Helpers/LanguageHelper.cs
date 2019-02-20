@@ -16,7 +16,7 @@ namespace Fanex.Alpha.Before.Common.Helpers
     /// </summary>
     public static class LanguageHelper
     {
-        private static readonly string[] languages = { "en-US", "th-TH", "zh-CN", "zh-TW", "ja-JP", "ko-KR", "vi-VN" };
+        private static readonly string[] languages = { "zh-Hans", "zh-TW", "en-US" };
 
         public static string DefaultLanguage
         {
@@ -57,11 +57,6 @@ namespace Fanex.Alpha.Before.Common.Helpers
         /// <returns>Return result.</returns>
         public static bool IsValidLanguage(string culture)
         {
-            if (AppSetting.DisabledVietnamese && culture == "vi-VN")
-            {
-                return false;
-            }
-
             int totalLangaugesSupport = languages.Length;
             for (int i = 0; i < totalLangaugesSupport; i++)
             {
