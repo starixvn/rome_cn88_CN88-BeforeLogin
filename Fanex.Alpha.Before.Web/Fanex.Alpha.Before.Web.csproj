@@ -396,6 +396,9 @@
     <Content Include="compilerconfig4.json">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
+    <Content Include="Configurations\CN88.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml" />
+    <Content Include="Configurations\CN88.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
+    <Content Include="Configurations\CN88.StoreProcedure\RobotSpNames.xml" />
     <Content Include="Configurations\Local.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\Local.StoreProcedure\RobotSpNames.xml" />
     <Content Include="Configurations\Master.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
@@ -702,6 +705,52 @@
     <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.Web.Setting.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.ConnectionStrings.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.DomainGroupSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.LimtedCountryAccessSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.Web.Setting.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.ConnectionStrings.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.DomainGroupSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.LimtedCountryAccessSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.Setting.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.ConnectionStrings.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.DomainGroupSection.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.LimtedCountryAccessSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Configurations\WebDeployment.ConfigTransform\PROCN88.Web.Setting.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.ConnectionStrings.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.DomainGroupSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.LimtedCountryAccessSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.Setting.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.ConnectionStrings.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.DomainGroupSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.Setting.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
