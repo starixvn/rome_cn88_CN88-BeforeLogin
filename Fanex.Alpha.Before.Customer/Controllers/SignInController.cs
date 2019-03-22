@@ -109,11 +109,6 @@ namespace Fanex.Alpha.Before.Customer.Controllers
             Session["Detecas-Username"] = txtUserName;
             Session["Detecas-AfterLoginUrl"] = loginResult.AfterLoginUrl;
 
-            if (loginResult.ErrCode == -1)
-            {
-                return Redirect(loginResult.AfterLoginUrl);
-            }
-
             return View(viewPath, loginResult);
         }
 
