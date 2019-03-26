@@ -26,7 +26,7 @@
             limitedCountryAccessRepository = new LimitedCountryAccessRepository();
 
             objectDb = Substitute.For<IObjectDb>();
-            ObjectDbFactory.CreateInstance = (settingKey) => objectDb;
+            Common.Repositories.ObjectDbFactory.CreateInstance = (settingKey) => objectDb;
             compareLogic = new CompareLogic();
         }
 

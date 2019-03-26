@@ -11,7 +11,7 @@
         {
             var result = new List<IpRange>();
 
-            using (var objectDb = ObjectDbFactory.CreateInstance(criteria.GetSettingKey()))
+            using (var objectDb = Fanex.Data.ObjectDbFactory.CreateInstance(criteria.GetSettingKey()))
             {
                 using (var reader = objectDb.ExecuteReader(criteria.GetSpParams()))
                 {
@@ -37,7 +37,7 @@
         {
             var result = new List<string>();
 
-            using (var objectDb = ObjectDbFactory.CreateInstance(criteria.GetSettingKey()))
+            using (var objectDb = Fanex.Data.ObjectDbFactory.CreateInstance(criteria.GetSettingKey()))
             {
                 using (var reader = objectDb.ExecuteReader(criteria.GetSpParams()))
                 {

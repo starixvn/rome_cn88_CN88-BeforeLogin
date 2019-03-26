@@ -1,9 +1,12 @@
 ﻿namespace Fanex.Alpha.Before.Common.Criteria.LimitedCountryAccess
 {
+    using System;
     using Data.Repository;
 
     public class GetAllowedAccessIPsCriteria : CriteriaBase
     {
         public override string GetSettingKey() => "Age_AllowedAccessIPsSel";
+
+        public override bool IsValid() => true;
     }
 }

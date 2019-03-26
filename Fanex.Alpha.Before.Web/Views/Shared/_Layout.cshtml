@@ -1,4 +1,4 @@
-@using CommonAppSetting = Fanex.Alpha.Before.Common.Configurations.AppSetting
+﻿@using CommonAppSetting = Fanex.Alpha.Before.Common.Configurations.AppSetting
 @if (Model is HandleErrorInfo)
 {
     Fanex.Logging.Extensions.Web.ExceptionHandler.Handle(Model.Exception);
@@ -50,6 +50,8 @@ else if (Model.GetType() == typeof(Fanex.Alpha.Before.Customer.Models.SignInResu
         @RenderSection("scripts", false)
 
         @Html.Partial("GoogleAnalytic", CommonAppSetting.GoogleAnalyticId)
+
+        @Html.Raw(Fanex.Logging.LogManager.RenderJavascriptLogger())
 
     </body>
 </html>

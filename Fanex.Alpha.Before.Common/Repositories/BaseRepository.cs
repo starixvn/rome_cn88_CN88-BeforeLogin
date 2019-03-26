@@ -8,7 +8,6 @@ namespace Fanex.Alpha.Before.Common.Repositories
 {
     using Fanex.Alpha.Before.Infrastructure.Models;
     using Fanex.Common;
-    using Fanex.Data;
     using Fanex.Data.Repository;
 
     /// <summary>
@@ -24,7 +23,7 @@ namespace Fanex.Alpha.Before.Common.Repositories
         public Result RunSP(CriteriaBase criteria)
         {
             Result runResult = null;
-            using (var objectDB = new ObjectDb(criteria.GetSettingKey()))
+            using (var objectDB = new Data.ObjectDb(criteria.GetSettingKey()))
             {
                 objectDB.AssignParamValues(criteria.GetSpParams());
                 objectDB.ExecuteNonQuery();

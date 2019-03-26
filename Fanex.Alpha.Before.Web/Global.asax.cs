@@ -8,15 +8,19 @@ namespace Fanex.Alpha.Before.Web.View
 {
     using CaptchaMvc.Infrastructure;
     using CaptchaMvc.Interface;
+    using Common.App_Start;
     using Common.Configurations;
     using Common.Services.LimitedCountryAccessService;
-    using Logging.Extensions.Database;
+    using Data;
+    using Data.CrossCutting.WrappingException;
+    using Data.OldConnectionStringProvider;
     using Logging.Extensions.Web;
     using ONEbook.UM.Configurations;
     using ONEbook.UM.Models;
     using ONEbook.UM.Services.Impl;
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Diagnostics;
     using System.Web.Mvc;
     using System.Web.Routing;
@@ -64,20 +68,21 @@ namespace Fanex.Alpha.Before.Web.View
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 
-            Fanex.Data.Configuration.DbSettingProviderManager.Current.Start();
+            LoggingManager.Init();
+
+            DbSettingProviderManager
+                .StartNewSession()
+                .Use(new OldConnectionStringProvider())
+                .UseDefaultDbSettingProvider(ConfigurationManager.AppSettings["StoredProcedurePath"])
+                .Use((settingKey, commandTimeout) => new WrappingExceptionObjectDb(settingKey, commandTimeout))
+                .Run();
 
             CaptchaUtils.CaptchaManager.StorageProvider = new CookieStorageProvider();
             var defaultCaptchaManager = (DefaultCaptchaManager)CaptchaUtils.CaptchaManager;
             defaultCaptchaManager.ImageUrlFactory = (helper, pair) => ImageUrlFactory(defaultCaptchaManager, helper, pair);
             defaultCaptchaManager.RefreshUrlFactory = RefreshUrlFactory;
 
-            MvcHandler.DisableMvcResponseHeader = true;
-
-            var loggingConfiguration = new LoggingConfiguration()
-               .HideSensitiveInfo(GetRegexToHideSensitiveInfo())
-               .UseGetDbExceptionInfo(DatabaseInfoGetters.GetDbExceptionInfo);
-
-            ExceptionHandler.UseConfig(loggingConfiguration);
+            MvcHandler.DisableMvcResponseHeader = true;            
 
             UMClientManager.WhenError((message) =>
             {
@@ -130,20 +135,6 @@ namespace Fanex.Alpha.Before.Web.View
             Response.Headers.Remove("Server");
             Response.Headers.Remove("X-AspNet-Version");
             Response.Headers.Remove("X-AspNetMvc-Version");
-        }
-
-        private static List<string> GetRegexToHideSensitiveInfo()
-        {
-            var result = new List<string>();
-            var sensitiveInfo = new[] { "password", "txtpassword" };
-
-            foreach (var info in sensitiveInfo)
-            {
-                result.Add($"(?:{info}=)(?<paramValue>[^&|^\\s]+)");
-                result.Add($"(\"{info}\":)(?<paramValue>[^,|^\r]+)");
-            }
-
-            return result;
         }
         
         private static void InitIPsCache()

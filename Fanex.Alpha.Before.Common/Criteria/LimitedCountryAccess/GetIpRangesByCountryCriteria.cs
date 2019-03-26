@@ -1,5 +1,6 @@
 ﻿namespace Fanex.Alpha.Before.Common.Criteria.LimitedCountryAccess
 {
+    using System;
     using Data.Repository;
 
     public class GetIpRangesByCountryCriteria : CriteriaBase
@@ -15,5 +16,7 @@
         public string CountryCodes { get; }
 
         public override string GetSettingKey() => "Age_IPRangesByCountrySel";
+
+        public override bool IsValid() => true;
     }
 }
