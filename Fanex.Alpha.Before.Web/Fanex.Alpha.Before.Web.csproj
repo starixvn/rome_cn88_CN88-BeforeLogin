@@ -758,6 +758,7 @@
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.LimtedCountryAccessSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.Web.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.Web.Setting.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.ConnectionStrings.config" />
     <None Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.Setting.config">
       <SubType>Designer</SubType>
     </None>
