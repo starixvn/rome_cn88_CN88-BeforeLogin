@@ -438,32 +438,16 @@
     </Content>
     <Content Include="Configurations\WebDeployment.ConfigTransform\Local.ConnectionStrings.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\Master.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\UAT.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UAT.Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UAT.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Local.Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Local.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UAT.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UAT.Web.Setting.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\Local.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\Local.Web.Setting.config" />
     <Content Include="favicon.ico" />
     <Content Include="favicon2.ico">
       <DependentUpon>favicon.ico</DependentUpon>
@@ -501,9 +485,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Configurations\WebDeployment.ConfigTransform\Local.DomainGroupSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.DomainGroupSection.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\UAT.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\Master.DomainGroupSection.config" />
     <Content Include="Areas\Customer\Web.config" />
@@ -700,9 +682,7 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\SIT.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\SIT.Web.Setting.config" />
     <Content Include="deployment.ignore" />
     <Content Include="Views\Shared\FPS.cshtml" />
     <Content Include="Views\Shared\GoogleAnalytic.cshtml" />
@@ -712,64 +692,44 @@
     <Content Include="Views\Common\ErrorPage\Index3.cshtml" />
     <Content Include="Fanex.Alpha.Before.Web.ruleset" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.DomainGroupSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.Web.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.ConnectionStrings.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.LimtedCountryAccessSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.Web.config">
+    <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.Web.Setting.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.ConnectionStrings.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.LimtedCountryAccessSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.DomainGroupSection.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.LimtedCountryAccessSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.Web.config">
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.Web.Setting.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Configurations\WebDeployment.ConfigTransform\PROCN88.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.ConnectionStrings.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.LimtedCountryAccessSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.LimtedCountryAccessSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.Web.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\SITCN88.ConnectionStrings.config" />
-    <None Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.DomainGroupSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.config">
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.Setting.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.Setting.config">
-      <SubType>Designer</SubType>
-    </None>
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.ConnectionStrings.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.DomainGroupSection.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.config" />
+    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.Setting.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
