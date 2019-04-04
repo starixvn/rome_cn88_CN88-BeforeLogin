@@ -40,6 +40,7 @@ namespace Fanex.Alpha.Before.Common.Configurations
                     case "th-TH": return "TH";
                     case "ko-KR": return "KO";
                     case "vi-VN": return "VI";
+                    case "zh-Hans": return "CN";
                     default: return "E";
                 }
             }
