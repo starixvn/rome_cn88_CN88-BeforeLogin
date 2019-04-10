@@ -137,4 +137,7 @@ For security reasons, this feature has been locked for {1} minutes</value>
     <value>Your IP exceeded the maximum number ({0} times) of attempts to authenticate with your credentials.
 For security reasons, this feature has been locked for {1} minutes</value>
   </data>
+  <data name="Validation" xml:space="preserve">
+    <value>Validation</value>
+  </data>
 </root>

@@ -105,5 +105,14 @@ namespace Fanex.Alpha.Before.Customer.Resources {
                 return ResourceManager.GetString("lblPasswordChanged", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Validation.
+        /// </summary>
+        public static string Validation {
+            get {
+                return ResourceManager.GetString("Validation", resourceCulture);
+            }
+        }
     }
 }
