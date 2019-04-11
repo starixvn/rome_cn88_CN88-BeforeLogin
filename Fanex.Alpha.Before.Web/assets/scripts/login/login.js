@@ -140,6 +140,7 @@ Sphinx.Login = {
         var strCaptcha = domElements.txtCaptcha;
         var currentCaptcha = strCaptcha.attr('placeholder');
         strCaptcha.attr('placeholder', resource.Captcha);
+        $(".txt-validation").attr('placeholder', resource.Captcha);
         if (Sphinx.Login.browser.msie && strCaptcha.val() === currentCaptcha) {
             strCaptcha.val(resource.Captcha);
         }
