@@ -131,7 +131,7 @@ For security reasons, this feature has been locked for {1} minutes</value>
     <value>Login Successfully</value>
   </data>
   <data name="lblPasswordChanged" xml:space="preserve">
-    <value>您上次更改密码于{0}。若您仍无法登入, 请联系客服部。</value>
+    <value>密码上次变更于{0}。一旦发现无法登入，请立即联系客服人员。</value>
   </data>
   <data name="Validation" xml:space="preserve">
     <value>验证</value>
