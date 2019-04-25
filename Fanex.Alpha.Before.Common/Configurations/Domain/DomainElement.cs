@@ -13,20 +13,6 @@ namespace Fanex.Alpha.Before.Common.Configurations.Domain
     /// </summary>
     public class DomainElement : ConfigurationElement
     {
-        [ConfigurationProperty("id", DefaultValue = "0", IsRequired = true, IsKey = true)]
-        public string Id
-        {
-            get
-            {
-                return (string)this["id"];
-            }
-
-            set
-            {
-                this["id"] = value;
-            }
-        }
-
         [ConfigurationProperty("active", DefaultValue = true, IsRequired = true, IsKey = true)]
         public bool Active
         {
