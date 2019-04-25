@@ -27,7 +27,7 @@ namespace Fanex.Alpha.Before.Common.Configurations.Domain
             }
         }
 
-        [ConfigurationProperty("before", DefaultValue = "NA", IsRequired = true)]
+        [ConfigurationProperty("before", DefaultValue = "NA", IsRequired = true, IsKey = true)]
         public string BeforeUrl
         {
             get

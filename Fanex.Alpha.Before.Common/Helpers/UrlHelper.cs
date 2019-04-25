@@ -26,7 +26,14 @@ namespace Fanex.Alpha.Before.Common.Helpers
         {
             get
             {
-                var requestURL = System.Web.HttpContext.Current.Request.Url.ToString();
+                var request = HttpContext.Current.Request;
+                var hostName = request.Headers["Host"];
+                var appPath = request.ApplicationPath;
+                var protocol = request.IsSecureConnection ? HttpSlashSlashS : HttpSlashSlash;
+                var hasAppPath = appPath.Length > 1;
+                var slash = hasAppPath ? "/" : string.Empty;
+                var requestURL = $"{protocol}{hostName}{appPath}{slash}";
+
                 var domainGroupSection = DomainGroupSection.Instance.DomainGroup;
                 var baseUrl = GetBaseUrl();
                 var defaultGroup = "Others";
