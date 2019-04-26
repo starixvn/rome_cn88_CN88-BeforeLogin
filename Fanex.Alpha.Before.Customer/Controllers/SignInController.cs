@@ -95,7 +95,7 @@ namespace Fanex.Alpha.Before.Customer.Controllers
             {
                 if (loginResult.ErrCode == -1)
                 {
-                    //FPSTracking(loginResult);
+                    FPSTracking(loginResult);
 
                     return string.IsNullOrEmpty(loginResult.AfterLoginUrl) ?
                         (ActionResult)RedirectToAction("Index") :
