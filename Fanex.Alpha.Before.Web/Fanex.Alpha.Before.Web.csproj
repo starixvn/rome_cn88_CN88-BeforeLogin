@@ -340,6 +340,12 @@
     <Content Include="assets\scripts\login\resources.js" />
     <Content Include="assets\scripts\raven.min.js" />
     <Content Include="assets\scripts\um\um.js" />
+    <Content Include="assets\styles\fonts\CN88\demo-files\demo.css" />
+    <Content Include="assets\styles\fonts\CN88\demo-files\demo.js" />
+    <Content Include="assets\styles\fonts\CN88\demo.html" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.svg" />
+    <Content Include="assets\styles\fonts\CN88\Read Me.txt" />
+    <Content Include="assets\styles\fonts\CN88\style.css" />
     <Content Include="assets\styles\images\crossword.png" />
     <Content Include="assets\styles\images\error3-bg.png" />
     <Content Include="assets\styles\images\sprites.png" />
@@ -668,6 +674,10 @@
     <Content Include="assets\styles\themes\default3.scss" />
     <Content Include="assets\styles\pages\um3.scss" />
     <Content Include="assets\styles\pages\error3.scss" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.eot" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.ttf" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.woff" />
+    <Content Include="assets\styles\fonts\CN88\selection.json" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

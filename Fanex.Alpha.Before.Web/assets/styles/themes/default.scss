@@ -28,22 +28,29 @@ input[type="checkbox"], input[type="radio"] {
 
 // icons
 %icon {
-    background: url(../images/sprites.png) no-repeat;
+    //background: url(../images/sprites.png) no-repeat;
+    font-family: 'CN88';
     display: inline-block;
 }
 
 .icon-user {
     @extend %icon;
-    background-position: -55px -2px;
-    height: 20px;
-    width: 20px;
+    font-size: 18px;
+
+    &:before {
+        content: "\e900";
+        color: #c5c5c5;
+    }
 }
 
 .icon-lock {
     @extend %icon;
-    background-position: -55px -26px;
-    height: 21px;
-    width: 20px;
+    font-size: 18px;
+
+    &:before {
+        content: "\e903";
+        color: #c5c5c5;
+    }
 }
 
 .icon-refresh {
@@ -96,7 +103,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .logo-icon {
-    @extend %icon;
+    display: inline-block;
+    background: url(../images/sprites.png) no-repeat;
     background-position: 0 -124px;
     height: 72px;
     width: 73px;
@@ -144,12 +152,12 @@ input[type="checkbox"], input[type="radio"] {
             //border-bottom: 2px solid $border-color-dark;
             color: $text-box-color-focus;
 
-            + .icon-user {
-                background-position: -85px -2px;
+            + .icon-user:before {
+                color: #808080;
             }
 
-            + .icon-lock {
-                background-position: -85px -26px;
+            + .icon-lock:before {
+                color: #808080;
             }
         }
     }
@@ -178,7 +186,7 @@ input[type="checkbox"], input[type="radio"] {
         }
 
         .icon-lock {
-            top: 13px;
+            top: 15px;
         }
 
         &.group-captcha {
@@ -218,9 +226,9 @@ input[type="checkbox"], input[type="radio"] {
             input[type="checkbox"] {
                 display: block;
                 opacity: 0;
-                height: 24px;
+                height: 20px;
                 position: absolute;
-                width: 24px;
+                width: 20px;
 
                 &:checked + span:after {
                     transform: scale(1);
@@ -230,25 +238,29 @@ input[type="checkbox"], input[type="radio"] {
             span {
                 position: relative;
                 display: block;
-                padding-left: 35px;
+                padding-left: 30px;
                 cursor: pointer;
-                height: 24px;
-                line-height: 24px;
+                height: 20px;
+                line-height: 20px;
 
                 &:before, &:after {
                     border: 1px solid #D2D2D2;
                     content: "";
                     display: block;
                     left: 0;
-                    height: 24px;
+                    height: 20px;
                     position: absolute;
-                    width: 24px;
+                    width: 20px;
                     top: 0;
                 }
 
                 &:after {
-                    background: url(../images/sprites.png) no-repeat;
-                    background-position: -51px -81px;
+                    font-family: 'CN88';
+                    display: inline-block;
+                    left: 3px;
+                    content: "\e901";
+                    font-size: 10px;
+                    color: #27a67b;
                     border: 0;
                     transform: scale(0);
                     transition: .2s;
@@ -262,6 +274,20 @@ input[type="checkbox"], input[type="radio"] {
             background: #f1d9da;
             color: #A52823;
             margin: 0 20px;
+            padding-left: 35px;
+
+            &:before {
+                font-family: 'CN88';
+                position: absolute;
+                width: 15px;
+                height: 19px;
+                top: 50%;
+                margin-top: -11px;
+                left: 10px;
+                display: inline-block;
+                content: "\e902";
+                color: #a52823;                
+            }
         }
     }
 
@@ -393,6 +419,8 @@ input[type="checkbox"], input[type="radio"] {
         text-align: center;
         background: #585757;
         color: #A49E9E;
+        text-transform: uppercase;
+        font-weight: bold;
 
         &.active {
             color: #fff;
