@@ -12,6 +12,7 @@
     <link href="~/assets/bundles/themes/@(Model.LoginTemplate).min.css?ver=@AppSetting.Version" rel="stylesheet" />
 }
 
+
 <div class="box-lang">
     <div class="dropdown">
         <span class="btn dropdown-toggle" type="button" id="langList" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -24,25 +25,29 @@
             <li><a href="#"><span class="flag flag-cn" data-language-code="zh-Hans"></span>简体版</a></li>
             <li><a href="#"><span class="flag flag-tw" data-language-code="zh-TW"></span>繁體版</a></li>
             <li><a href="#"><span class="flag flag-en" data-language-code="en-US"></span>English</a></li>
+
         </ul>
     </div>
 </div>
 
-<h1 class="title login-text">Login</h1>
+@*<h1 class="title login-text">Login</h1>*@
 
-@if (Model.ErrCode != -1)
-{
-    <div class="rowlg msg-error" errCode="@Model.ErrCode" id="errmsg">@Model.ErrMsg</div>
-}
-
-<div class="rowlg">
-    <input type="text" class="txt" placeholder="Username" id="txtUserName" name="txtUserName" tabindex="1" />
-    <i class="icon-user"></i>
+<div class="title-group">
+    <span>Login 1</span>
+    <span class="active">Login 2</span>
+    <span>Login 3</span>
 </div>
 
-<div class="rowlg">
-    <input type="password" class="txt" placeholder="Password" id="txtPassWord" name="txtPassWord" tabindex="2" autocomplete="off" />
-    <i class="icon-lock"></i>
+<div class="form-field">
+    <div class="rowlg">
+        <input type="text" class="txt" placeholder="Username" id="txtUserName" name="txtUserName" tabindex="1" />
+        <i class="icon-user"></i>
+    </div>
+
+    <div class="rowlg">
+        <input type="password" class="txt" placeholder="Password" id="txtPassWord" name="txtPassWord" tabindex="2" autocomplete="off" />
+        <i class="icon-lock"></i>
+    </div>
 </div>
 
 <div class="rowlg checkbox">
@@ -61,6 +66,11 @@
 <div class="list-button">
     <input type="button" class="btnLogin" value="Login" id="btnLogin" tabindex="5" />
 </div>
+
+@if (Model.ErrCode != -1)
+{
+    <div class="rowlg msg-error" errCode="@Model.ErrCode" id="errmsg">@Model.ErrMsg</div>
+}
 
 @if (ViewBag.ShowReCaptcha == true)
 {

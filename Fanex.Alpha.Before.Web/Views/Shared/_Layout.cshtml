@@ -29,6 +29,7 @@ else if (Model.GetType() == typeof(Fanex.Alpha.Before.Customer.Models.SignInResu
         </div>
 
         <div id="mainholder" class="block-login">
+            <div class="logo-icon"></div>
             <form id="formLogin" class="form-login" action="@Url.Content("~/")" method="POST" autocomplete="off">
                 @RenderBody()
                 <input name="code" id="code" type="hidden" value="@Model.Captcha" />
