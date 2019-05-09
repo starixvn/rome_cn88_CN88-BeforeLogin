@@ -392,7 +392,9 @@ input[type="checkbox"], input[type="radio"] {
                 }
 
                 a {
-                    padding: 19px 0;
+                    height: 60px;
+                    line-height: 60px;
+                    padding: 0;
                     color: rgba(255,255,255,.6);
                     font-weight: bold;
 
