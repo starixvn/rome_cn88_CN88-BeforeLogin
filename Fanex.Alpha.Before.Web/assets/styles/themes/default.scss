@@ -190,7 +190,7 @@ input[type="checkbox"], input[type="radio"] {
         }
 
         &.group-captcha {
-            display: none;
+            display: table;
             width: 100%;
 
             .codeCaptcha {
