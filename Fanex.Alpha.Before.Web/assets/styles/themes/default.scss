@@ -193,6 +193,7 @@ input[type="checkbox"], input[type="radio"] {
         &.group-captcha {
             display: table;
             width: 100%;
+            margin: 0 20px;
 
             .codeCaptcha {
                 position: relative;
@@ -217,7 +218,7 @@ input[type="checkbox"], input[type="radio"] {
             .txt-validation {
                 padding-left: 10px;
                 border: 1px solid #d2d2d2;
-                width: calc(100% - 50px);
+                width: calc(100% - 40px);
             }
         }
 
@@ -278,7 +279,6 @@ input[type="checkbox"], input[type="radio"] {
             color: #A52823;
             margin: 0 20px;
             //padding-left: 35px;
-
             /*&:before {
                 font-family: 'CN88';
                 position: absolute;
@@ -445,7 +445,6 @@ input[type="checkbox"], input[type="radio"] {
     /*margin-top: 16px;
     padding-left: 24px;
     position: relative;*/
-
     /*&:before {
         @extend %icon;
         background-position: -29px -83px;
@@ -484,9 +483,13 @@ input[type="checkbox"], input[type="radio"] {
             padding-right: 10px;
         }
 
-        .rowlg.msg-error, .rowlg.checkbox {
+        .rowlg.msg-error, .rowlg.checkbox, .rowlg.group-captcha {
             margin-left: 10px;
             margin-right: 10px;
+
+            .txt-validation {
+                width: calc(100% - 20px);
+            }
         }
     }
 
