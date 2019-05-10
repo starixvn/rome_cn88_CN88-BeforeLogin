@@ -55,6 +55,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .icon-refresh {
     @extend %icon;
+    background: url(../images/sprites.png) no-repeat;
     background-position: -29px -2px;
     cursor: pointer;
     height: 16px;
@@ -214,7 +215,9 @@ input[type="checkbox"], input[type="radio"] {
             }
 
             .txt-validation {
-                padding-left: 0;
+                padding-left: 10px;
+                border: 1px solid #d2d2d2;
+                width: calc(100% - 50px);
             }
         }
 
@@ -438,11 +441,12 @@ input[type="checkbox"], input[type="radio"] {
 
 .block-info {
     @extend %block;
-    margin-top: 16px;
+    padding: 20px;
+    /*margin-top: 16px;
     padding-left: 24px;
-    position: relative;
+    position: relative;*/
 
-    &:before {
+    /*&:before {
         @extend %icon;
         background-position: -29px -83px;
         content: '';
@@ -451,7 +455,7 @@ input[type="checkbox"], input[type="radio"] {
         position: absolute;
         left: 0;
         top: 2px;
-    }
+    }*/
 }
 
 @media only screen and (max-device-width: 767px) {
@@ -500,13 +504,14 @@ input[type="checkbox"], input[type="radio"] {
     }
 
     .block-info {
-        padding: 0 30px 8px 54px;
+        /*padding: 0 30px 8px 54px;
         width: 100%;
 
         &:before {
             left: 30px;
             top: 3px;
-        }
+        }*/
+        padding: 10px;
     }
 
     .block-warning {
@@ -553,7 +558,7 @@ input[type="checkbox"], input[type="radio"] {
         }
     }
 
-    .block-info:before {
+    /*.block-info:before {
         top: 1px;
-    }
+    }*/
 }
