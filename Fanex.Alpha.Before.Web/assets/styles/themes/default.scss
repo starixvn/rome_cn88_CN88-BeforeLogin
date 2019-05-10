@@ -11,7 +11,7 @@ body {
     font-size: $font-size + 2;
     background-color: $bg-color;
     margin: 0;
-    padding-top: 10%;
+    padding-top: 180px;
 }
 
 input, button {
@@ -56,16 +56,16 @@ input[type="checkbox"], input[type="radio"] {
 .icon-refresh {
     @extend %icon;
     //background: url(../images/sprites.png) no-repeat;
-    //background-position: -29px -2px;    
+    //background-position: -29px -2px;
     cursor: pointer;
     height: 16px;
     width: 16px;
-    font-size: 22px;    
+    font-size: 22px;
 
     &:before {
         content: "\e904";
         color: #27A67B;
-    }    
+    }
 }
 
 .flag {
@@ -194,8 +194,10 @@ input[type="checkbox"], input[type="radio"] {
 
         &.group-captcha {
             display: table;
-            //width: 100%;
-            margin: 0 20px;
+            padding: 0 20px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
 
             .codeCaptcha {
                 position: relative;
@@ -208,16 +210,22 @@ input[type="checkbox"], input[type="radio"] {
             }
 
             .action-refresh {
-                width: 48px; 
+                width: 48px;
                 padding: 0 10px;
                 padding-right: 20px;
                 text-align: center;
             }
 
+            .field-captcha {
+                width: 100%;
+                border: 1px solid #d2d2d2;
+            }
+
             .txt-validation {
                 padding: 0 10px;
                 height: 44px;
-                border: 1px solid #d2d2d2;
+                border: 0;
+                //box-shadow: 0 0 0 1px #d2d2d2;
             }
         }
 
@@ -425,6 +433,7 @@ input[type="checkbox"], input[type="radio"] {
         color: #A49E9E;
         text-transform: uppercase;
         font-weight: bold;
+        cursor: pointer;
 
         &.active {
             color: #fff;
@@ -485,7 +494,7 @@ input[type="checkbox"], input[type="radio"] {
 
         .rowlg.msg-error, .rowlg.checkbox, .rowlg.group-captcha {
             margin-left: 10px;
-            margin-right: 10px;            
+            margin-right: 10px;
         }
     }
 
@@ -511,6 +520,8 @@ input[type="checkbox"], input[type="radio"] {
             top: 3px;
         }*/
         padding: 10px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .block-warning {
@@ -538,23 +549,21 @@ input[type="checkbox"], input[type="radio"] {
 
     .block-login {
         @include box-shadow-multiple(none);
-
-        .rowlg {
+        /*.rowlg {
             margin-bottom: 16px;
 
             &.msg-error {
                 margin: 12px 0 4px;
             }
-        }
-
-        .title {
+        }*/
+        /*.title {
             margin: 4px 0 4px;
             font-size: $font-size + 7;
         }
 
         .list-button {
             padding-top: 0;
-        }
+        }*/
     }
 
     /*.block-info:before {
