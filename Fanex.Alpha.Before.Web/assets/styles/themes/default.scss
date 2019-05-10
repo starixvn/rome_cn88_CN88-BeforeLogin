@@ -270,13 +270,13 @@ input[type="checkbox"], input[type="radio"] {
 
         &.msg-error {
             //color: $msg-error-color;
-            border: 1px solid #e2a9ab;
-            background: #f1d9da;
+            //border: 1px solid #e2a9ab;
+            //background: #f1d9da;
             color: #A52823;
             margin: 0 20px;
-            padding-left: 35px;
+            //padding-left: 35px;
 
-            &:before {
+            /*&:before {
                 font-family: 'CN88';
                 position: absolute;
                 width: 15px;
@@ -287,7 +287,7 @@ input[type="checkbox"], input[type="radio"] {
                 display: inline-block;
                 content: "\e902";
                 color: #a52823;                
-            }
+            }*/
         }
     }
 
