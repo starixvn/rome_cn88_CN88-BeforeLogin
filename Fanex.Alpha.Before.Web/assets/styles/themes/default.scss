@@ -55,15 +55,17 @@ input[type="checkbox"], input[type="radio"] {
 
 .icon-refresh {
     @extend %icon;
-    background: url(../images/sprites.png) no-repeat;
-    background-position: -29px -2px;
+    //background: url(../images/sprites.png) no-repeat;
+    //background-position: -29px -2px;    
     cursor: pointer;
     height: 16px;
     width: 16px;
+    font-size: 22px;    
 
-    &:hover {
-        background-position: -29px -28px;
-    }
+    &:before {
+        content: "\e904";
+        color: #27A67B;
+    }    
 }
 
 .flag {
@@ -192,7 +194,7 @@ input[type="checkbox"], input[type="radio"] {
 
         &.group-captcha {
             display: table;
-            width: 100%;
+            //width: 100%;
             margin: 0 20px;
 
             .codeCaptcha {
@@ -206,19 +208,16 @@ input[type="checkbox"], input[type="radio"] {
             }
 
             .action-refresh {
+                width: 48px; 
                 padding: 0 10px;
-                width: 40px;
-
-                .icon-refresh {
-                    position: relative;
-                    top: 4px;
-                }
+                padding-right: 20px;
+                text-align: center;
             }
 
             .txt-validation {
-                padding-left: 10px;
+                padding: 0 10px;
+                height: 44px;
                 border: 1px solid #d2d2d2;
-                width: calc(100% - 40px);
             }
         }
 
@@ -442,6 +441,7 @@ input[type="checkbox"], input[type="radio"] {
 .block-info {
     @extend %block;
     padding: 20px;
+    font-style: italic;
     /*margin-top: 16px;
     padding-left: 24px;
     position: relative;*/
@@ -485,11 +485,7 @@ input[type="checkbox"], input[type="radio"] {
 
         .rowlg.msg-error, .rowlg.checkbox, .rowlg.group-captcha {
             margin-left: 10px;
-            margin-right: 10px;
-
-            .txt-validation {
-                width: calc(100% - 20px);
-            }
+            margin-right: 10px;            
         }
     }
 

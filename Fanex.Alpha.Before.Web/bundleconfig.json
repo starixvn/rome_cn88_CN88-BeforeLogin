@@ -17,8 +17,8 @@
   {
     "outputFileName": "assets/bundles/themes/default.css",
     "inputFiles": [
-      "assets/styles/themes/default.css",
-      "assets/styles/fonts/CN88/style.css"
+      "assets/styles/fonts/CN88/style.css",
+      "assets/styles/themes/default.css"
     ]
   },
   {
