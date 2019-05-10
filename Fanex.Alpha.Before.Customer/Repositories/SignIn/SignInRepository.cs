@@ -26,7 +26,7 @@ namespace Fanex.Alpha.Before.Customer.Repositories.SignIn
         /// <param name="password">User's password.</param>
         /// <param name="requestInfo">The request information.</param>
         /// <returns>Return verify result.</returns>
-        public VerifySignInResult VerifyDownlineLogin(string username, string password, Hashtable requestInfo)
+        public VerifySignInResult VerifyDownlineLogin(string username, string password, byte roleId, Hashtable requestInfo)
         {
             using (var objectDB = new ObjectDb("Age_LoginVerifyDownline"))
             {
@@ -43,6 +43,12 @@ namespace Fanex.Alpha.Before.Customer.Repositories.SignIn
                 parameters.Add("errcode", 0);
                 parameters.Add("errmsg", string.Empty);
                 parameters.Add("lastchangedpwddate", null);
+
+                if (!AppSetting.IsHeadline)
+                {
+                    parameters.Add("userroleid", roleId);
+                }
+
                 InsertRequestInfo(requestInfo, parameters);
 
                 objectDB.AssignParamValues(parameters);

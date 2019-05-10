@@ -71,6 +71,7 @@ namespace Fanex.Alpha.Before.Customer.Controllers
         public ActionResult Index(
             string txtUserName,
             string txtPassWord,
+            byte roleId,
             string hidLanguage,
             string code,
             string browserSize,
@@ -89,7 +90,7 @@ namespace Fanex.Alpha.Before.Customer.Controllers
                 }
             }
 
-            var loginResult = _signInService.SignInWithRecaptcha(txtUserName, txtPassWord, hidLanguage, validCaptcha, code, deviceId, browserSize);
+            var loginResult = _signInService.SignInWithRecaptcha(txtUserName, txtPassWord, roleId, hidLanguage, validCaptcha, code, deviceId, browserSize);
 
             if (loginResult != null && loginResult.ErrCode != -2)
             {
@@ -108,9 +109,9 @@ namespace Fanex.Alpha.Before.Customer.Controllers
             return View(viewPath, loginResult);
         }
 
-        public RedirectResult AutomationTest(string username, string password, string captcha, string deviceId, string browserSize)
+        public RedirectResult AutomationTest(string username, string password, byte roleId, string captcha, string deviceId, string browserSize)
         {
-            var loginResult = _signInService.AutomationTest(username, password, captcha, deviceId, browserSize);
+            var loginResult = _signInService.AutomationTest(username, password, roleId, captcha, deviceId, browserSize);
 
             if (loginResult.ErrCode == -1)
             {
@@ -155,7 +156,7 @@ namespace Fanex.Alpha.Before.Customer.Controllers
             {
                 ExceptionHandler.Handle(ex);
             }
-        }       
+        }
 
         private bool IsNeedMappingSslDomain()
         {

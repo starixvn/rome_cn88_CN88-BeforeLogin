@@ -64,7 +64,13 @@ Sphinx.Login = {
         hidLanguage: null,
         languageItems: null,
         lblShowPass: null,
-        formLogin: null
+        formLogin: null,
+        loginLevels: null,
+        roleId: null,
+        isHeadline: null,
+        login1: null,
+        login2: null,
+        login3: null
     },
     cachedDomElements: function () {
         Sphinx.Login.domElements.txtUsername = $('#txtUserName');
@@ -81,6 +87,12 @@ Sphinx.Login = {
         Sphinx.Login.domElements.formTitle = $('.login-text');
         Sphinx.Login.domElements.lblShowPass = $('#lbShowPass');
         Sphinx.Login.domElements.formLogin = $('#formLogin');
+        Sphinx.Login.domElements.loginLevels = $('#loginLevel span');
+        Sphinx.Login.domElements.roleId = $('#roleId');
+        Sphinx.Login.domElements.isHeadline = $('#isHeadline');
+        Sphinx.Login.domElements.login1 = $('#login-1');
+        Sphinx.Login.domElements.login2 = $('#login-2');
+        Sphinx.Login.domElements.login3 = $('#login-3');
     },
     initComponent: function () {
         var domElements = Sphinx.Login.domElements;
@@ -99,6 +111,14 @@ Sphinx.Login = {
         });
         domElements.btnLogin.click(Sphinx.Login.doLogin);
         domElements.chbShowPassword.click(Sphinx.Login.showPassword);
+
+        Sphinx.Login.domElements.loginLevels.click(function () {
+            Sphinx.Login.domElements.loginLevels.removeClass('active');
+
+            var $this = $(this);
+            Sphinx.Login.domElements.roleId.val($this.data('role-id'));
+            $this.addClass('active');
+        });
     },
 
     getValidateImage: function () {
@@ -148,11 +168,21 @@ Sphinx.Login = {
         flag.removeClass().addClass(resource.Flag);
         domElements.lblLanguage.html(resource.Language);
 
+        domElements.languageItems.removeClass('active');
+        domElements.languageItems.children(`[data-language-code='${resource.Id}']`).parent().addClass('active');
+
+
         domElements.hidLanguage.val(languageCode);
         domElements.lblShowPass.html(resource.ShowPassword);
 
         domElements.btnLogin.val(resource.Login);
-        domElements.formTitle.text(resource.Login);;
+        if (domElements.isHeadline.val().toString().toLowerCase() === 'true') {
+            domElements.formTitle.text(resource.Login);
+        } else {
+            domElements.login1.text(resource.Login1);
+            domElements.login2.text(resource.Login2);
+            domElements.login3.text(resource.Login3);
+        }
         document.title = resource.Login;
 
         Sphinx.Core.setUserData('LANGUAGE', languageCode);

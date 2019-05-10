@@ -1,5 +1,5 @@
 ﻿@using CaptchaMvc.HtmlHelpers;
-
+@using Fanex.Alpha.Before.Customer.Constants
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -25,17 +25,25 @@
             <li><a href="#"><span class="flag flag-cn" data-language-code="zh-Hans"></span>简体版</a></li>
             <li><a href="#"><span class="flag flag-tw" data-language-code="zh-TW"></span>繁體版</a></li>
             <li><a href="#"><span class="flag flag-en" data-language-code="en-US"></span>English</a></li>
-
         </ul>
     </div>
 </div>
 
 @*<h1 class="title login-text">Login</h1>*@
 
-<div class="title-group">
-    <span>Login 1</span>
-    <span class="active">Login 2</span>
-    <span>Login 3</span>
+<div id="loginLevel" class="title-group">
+    @if (AppSetting.IsHeadline)
+    {
+        <span class=".login-text">Login</span>
+    }
+    else
+    {
+        <span id="login-1" @(Model.LoginLevel == RoleIdConstants.Super ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Super">Login 1</span>
+        <span id="login-2" @(Model.LoginLevel == RoleIdConstants.Master ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Master">Login 2</span>
+        <span id="login-3" @(Model.LoginLevel == RoleIdConstants.Agent ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Agent">Login 3</span>
+    }
+    <input type="hidden" id="roleId" name="roleId" value="@Model.LoginLevel" />
+    <input type="hidden" id="isHeadline" value="@AppSetting.IsHeadline" />
 </div>
 
 <div class="form-field">

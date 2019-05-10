@@ -213,6 +213,7 @@
     <Compile Include="Configurations\AutomationTestSettings.cs" />
     <Compile Include="Configurations\CustomerAppSetting.cs" />
     <Compile Include="Configurations\LoginThemeSection.cs" />
+    <Compile Include="Constants\RoleIdConstants.cs" />
     <Compile Include="Constants\SignInErrorContants.cs" />
     <Compile Include="Controllers\SignInController.cs" />
     <Compile Include="GlobalSuppressions.cs" />

@@ -4,6 +4,8 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
+using Fanex.Alpha.Before.Customer.Constants;
+
 namespace Fanex.Alpha.Before.Customer.Models
 {
     /// <summary>
@@ -82,5 +84,7 @@ namespace Fanex.Alpha.Before.Customer.Models
             get;
             set;
         }
+
+        public byte LoginLevel { get; set; }
     }
 }
