@@ -348,6 +348,7 @@
     <Content Include="assets\styles\fonts\CN88\style.css" />
     <Content Include="assets\styles\images\crossword.png" />
     <Content Include="assets\styles\images\error3-bg.png" />
+    <Content Include="assets\styles\images\icon_UM.svg" />
     <Content Include="assets\styles\images\sprites.png" />
     <Content Include="assets\styles\images\sprites2.png" />
     <Content Include="assets\styles\images\sprites3.png" />
@@ -390,6 +391,7 @@
     </Content>
     <Content Include="assets\styles\themes\images\bg.jpg" />
     <Content Include="assets\styles\themes\images\bg2.jpg" />
+    <Content Include="assets\styles\images\icon_UM.png" />
     <Content Include="assets\styles\themes\images\sprites-theme.png" />
     <Content Include="assets\styles\themes\images\sprites-theme2.png" />
     <Content Include="assets\styles\vendors-extensions\login\bootstrap-ex.css">

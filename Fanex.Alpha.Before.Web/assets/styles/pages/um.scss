@@ -1,70 +1,185 @@
-﻿@font-face {
-  font-family: 'Roboto';  
-  src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'), 
-       url('../fonts/roboto/Roboto-Regular.woff') format('woff'),
-       url('../fonts/roboto/Roboto-Regular.ttf')  format('truetype'),
+﻿body {
+    font-family: Arial, Tahoma, sans-serif;    
+    color: #fff;
+    padding-top: 8%;   
+    padding-bottom: 156px; 
 }
 
-body, html {
-    height: 100%;
+.main {
+    display: table;
+    margin: auto;
+
+    .icon-um {   
+        display: table-cell;
+        width: 90px;
+        height: 90px;
+        background: url(../images/icon_UM.png) no-repeat;
+    }
+
+    .content {
+        display: table-cell;
+        padding-left: 40px;        
+        vertical-align: top;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .title-chinese {
+        margin: 5px 0 0;
+        color: #725835;        
+    }
+
+    .title-english {
+        margin-top: 10px;
+        color: #ac976c;
+    }
 }
 
-body {
-    font-family: Roboto, sans-serif;    
-    background: #f0f0f0;
-    color: #333;
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 156px;
+    background-color: #513F33;
     font-size: 14px;
 
-    @media only screen and (min-device-width: 767px) {
-        font-size: 20px;
+    ul {
+        display: table;
+        margin: auto;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border-right: 1px solid #423328;
+            vertical-align: middle;
+            line-height: 24px;
+            color: #DDBF8A;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        .datetime {
+            margin-top: 20px;
+        }
     }
 }
 
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    //padding-top: 10px;
-    text-align: center;
-    position: relative;
 
-    .img {
-        width: 100%;
+// Iphone
+@media (max-device-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
     }
 
-    @media only screen and (min-device-width: 768px) {
-        padding-top: 100px;
-        max-width: 800px;
+    .main {
+        .icon-um,
+        .content {
+            display: block;
+        }
+
+        .icon-um {
+            margin: 20px auto 20px;
+            background-image: url(../images/icon_UM.svg);        
+        }
+
+        .content {
+            padding-left: 0;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .title-chinese {
+            margin-top: 0;
+        }
     }
 
-    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
-        padding-top: 0;
+    .footer {
+        position: initial;
+        height: auto;
+        font-size: 16px;
+
+         ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            .datetime {
+                margin-top: 18px;
+            }
+        }
+
+         ul li {
+            display: block;
+            padding: 0 16px;
+            border-bottom: 1px solid #423328;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }         
     }
 }
 
-.title {
-    margin-top: 10px;
-    color: #67151b;
-    font-size: 36px;
-    font-weight: 600;
-    text-transform: uppercase;
+// Iphone X
 
-    @media only screen and (max-device-width: 767px) and (orientation: landscape) {
-        margin-top: 0;
+@media (device-width: 375px) and (device-height: 812px) {
+    .footer {
+        position: absolute;
     }
 }
 
-.time {
-    color: #67151b;
-}
+// Ipad landscape
+@media (min-device-width: 768px) and (orientation:landscape) {
+    .footer {
+        position: absolute;
 
-.caption {
-    padding-top: 17px;
-
-    @media only screen and (max-device-width: 767px) and (orientation: landscape) {
-        padding-top: 5px;
+        ul li {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
     }
 }
 
-.caption p {
-    margin: 0;
+// Iphone landscape
+@media (device-width: 812px) and (device-height: 375px) and (orientation: landscape) {
+    body {
+        padding-top: 6%;
+    }
+
+   .footer ul li {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
 }
+
+
+// Ipad portrait
+@media (min-device-width: 768px) and (orientation:portrait) {
+    body {
+        padding-top: 8%;
+    }
+
+    .footer {
+        position: absolute;
+    }
+}
+
+// Desktop
+@media (min-device-width: 1280px) {
+    .footer ul li {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+
