@@ -201,7 +201,11 @@ input[type="checkbox"], input[type="radio"] {
 
             .codeCaptcha {
                 position: relative;
-                width: 72px;
+                width: 124px;
+
+                img {
+                    width: 100%;
+                }
             }
 
             .codeCaptcha, .action-refresh, .txt-validation {
@@ -492,9 +496,14 @@ input[type="checkbox"], input[type="radio"] {
             padding-right: 10px;
         }
 
-        .rowlg.msg-error, .rowlg.checkbox, .rowlg.group-captcha {
+        .rowlg.msg-error, .rowlg.checkbox {
             margin-left: 10px;
             margin-right: 10px;
+        }
+
+        .rowlg.group-captcha {
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 
