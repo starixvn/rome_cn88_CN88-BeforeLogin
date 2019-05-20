@@ -443,6 +443,11 @@ input[type="checkbox"], input[type="radio"] {
             color: #fff;
             background: #8B8B8B;
         }
+
+        &.login-text {
+            display: block;
+            width: 100%;
+        }
     }
 }
 
