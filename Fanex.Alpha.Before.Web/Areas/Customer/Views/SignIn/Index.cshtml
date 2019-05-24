@@ -8,7 +8,7 @@
 
 @section styles
 {
-    
+
     <link href="~/assets/bundles/themes/@(Model.LoginTemplate).min.css?ver=@AppSetting.Version" rel="stylesheet" />
 }
 
@@ -16,14 +16,14 @@
     <div class="dropdown">
         <span class="btn dropdown-toggle" type="button" id="langList" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <span class="flag" id="flag"></span>
-            <span id="lblLanguage">简体</span> 
+            <span id="lblLanguage">简体版</span>
             <span class="caret"></span>
             <input type="hidden" value="zh-Hans" id="hidLanguage" name="hidLanguage">
         </span>
         <ul class="dropdown-menu" aria-labelledby="langList" id="language-ddl">
+            <li><a href="#"><span class="flag flag-cn" data-language-code="zh-Hans"></span>简体版</a></li>
+            <li><a href="#"><span class="flag flag-tw" data-language-code="zh-TW"></span>繁體版</a></li>
             <li><a href="#"><span class="flag flag-en" data-language-code="en-US"></span>English</a></li>
-            <li><a href="#"><span class="flag flag-cn" data-language-code="zh-Hans"></span>简体</a></li>
-            <li><a href="#"><span class="flag flag-tw" data-language-code="zh-TW"></span>繁體</a></li>            
         </ul>
     </div>
 </div>
@@ -36,7 +36,7 @@
 }
 
 <div class="rowlg">
-    <input type="text" class="txt" placeholder="Username"  id="txtUserName" name="txtUserName" tabindex="1" />
+    <input type="text" class="txt" placeholder="Username" id="txtUserName" name="txtUserName" tabindex="1" />
     <i class="icon-user"></i>
 </div>
 
@@ -47,7 +47,7 @@
 
 <div class="rowlg checkbox">
     <label>
-        <input name="chb-showpass" type="checkbox" id="chbShowPass" tabindex="3" /> 
+        <input name="chb-showpass" type="checkbox" id="chbShowPass" tabindex="3" />
         <span id="lbShowPass">Show password</span>
     </label>
 </div>
@@ -59,7 +59,7 @@
 
 <input type="hidden" name="browserSize" id="browserSize" value="" />
 <div class="list-button">
-    <input type="button" class="btnLogin" value="Login" id="btnLogin" tabindex="5"/>
+    <input type="button" class="btnLogin" value="Login" id="btnLogin" tabindex="5" />
 </div>
 
 @if (ViewBag.ShowReCaptcha == true)
