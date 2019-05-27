@@ -69,12 +69,10 @@
     }
 }
 
-
-// Iphone
-@media (max-device-width: 767px) {
+// For phone and tablet
+@media (max-device-width: 1024px) {
     body {
-        padding: 0;
-        margin: 0;
+        padding-top: 8%;
     }
 
     .main {
@@ -108,40 +106,6 @@
     }
 
     .footer {
-        position: initial;
-        margin-top: 0;
-        font-size: 16px;
-
-         ul {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-
-            .datetime {
-                margin-top: 18px;
-            }
-        }
-
-         ul li {
-            display: block;
-            padding: 0 16px;
-            border-bottom: 1px solid #423328;
-
-            &:last-child {
-                border-bottom: none;
-            }
-        }         
-    }
-}
-
-
-// Ipad portrait
-@media (min-device-width: 768px) and (max-device-width: 1023px) {
-    body {
-        padding-top: 8%;
-    }
-
-    .footer {
         margin-top: 98px;
 
         
@@ -167,13 +131,14 @@
     }
 }
 
-// Ipad landscape
-@media (min-device-width: 1024px) {
+
+@media (max-device-height: 812px) {
+    body {
+        padding-top: 4%;
+    }
+
     .footer {
-        ul li {
-            padding-left: 30px;
-            padding-right: 30px;
-        }
+        margin-top: 20px;
     }
 }
 
