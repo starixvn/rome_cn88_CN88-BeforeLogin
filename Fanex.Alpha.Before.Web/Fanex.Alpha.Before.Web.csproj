@@ -409,6 +409,8 @@
     </Content>
     <Content Include="Configurations\CN88.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\CN88.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
+    <Content Include="Configurations\Local.Dev.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml" />
+    <Content Include="Configurations\Local.Dev.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\Local.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\Master.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\MNL.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml">
