@@ -171,12 +171,11 @@ Sphinx.Login = {
         domElements.languageItems.removeClass('active');
         domElements.languageItems.children(`[data-language-code='${resource.Id}']`).parent().addClass('active');
 
-
         domElements.hidLanguage.val(languageCode);
         domElements.lblShowPass.html(resource.ShowPassword);
 
         domElements.btnLogin.val(resource.Login);
-        if (domElements.isHeadline.val().toString().toLowerCase() === 'true') {
+        if (domElements.isHeadline.val() === '1') {
             domElements.formTitle.text(resource.Login);
         } else {
             domElements.login1.text(resource.Login1);

@@ -12,7 +12,6 @@
     <link href="~/assets/bundles/themes/@(Model.LoginTemplate).min.css?ver=@AppSetting.Version" rel="stylesheet" />
 }
 
-
 <div class="box-lang">
     <div class="dropdown">
         <span class="btn dropdown-toggle" type="button" id="langList" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -43,7 +42,7 @@
         <span id="login-3" @(Model.LoginLevel == RoleIdConstants.Agent ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Agent">Login 3</span>
     }
     <input type="hidden" id="roleId" name="roleId" value="@Model.LoginLevel" />
-    <input type="hidden" id="isHeadline" value="@AppSetting.IsHeadline" />
+    <input type="hidden" id="isHeadline" value="@(AppSetting.IsHeadline ? 1 : 0)" />
 </div>
 
 <div class="form-field">
@@ -87,5 +86,3 @@
         <script src="~/assets/bundles/captcha.js?ver=@Fanex.Alpha.Before.Common.Configurations.AppSetting.Version" type="text/javascript"></script>
     }
 }
-
-
