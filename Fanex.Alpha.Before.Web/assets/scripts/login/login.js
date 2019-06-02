@@ -175,9 +175,7 @@ Sphinx.Login = {
         domElements.lblShowPass.html(resource.ShowPassword);
 
         domElements.btnLogin.val(resource.Login);
-        if (domElements.isHeadline.val() === '1') {
-            domElements.formTitle.text(resource.Login);
-        } else {
+        if (domElements.isHeadline.val() === '0') {
             domElements.login1.text(resource.Login1);
             domElements.login2.text(resource.Login2);
             domElements.login3.text(resource.Login3);

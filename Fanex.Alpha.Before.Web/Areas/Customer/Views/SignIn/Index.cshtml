@@ -31,11 +31,7 @@
 @*<h1 class="title login-text">Login</h1>*@
 
 <div id="loginLevel" class="title-group">
-    @if (AppSetting.IsHeadline)
-    {
-        <span class="login-text active">Login</span>
-    }
-    else
+    @if (!AppSetting.IsHeadline)
     {
         <span id="login-1" @(Model.LoginLevel == RoleIdConstants.Super ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Super">Login 1</span>
         <span id="login-2" @(Model.LoginLevel == RoleIdConstants.Master ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Master">Login 2</span>
