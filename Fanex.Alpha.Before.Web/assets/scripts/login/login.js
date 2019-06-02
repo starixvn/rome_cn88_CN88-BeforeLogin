@@ -116,7 +116,7 @@ Sphinx.Login = {
             Sphinx.Login.domElements.loginLevels.removeClass('active');
 
             var $this = $(this);
-            Sphinx.Login.domElements.roleId.val($this.data('role-id'));
+            Sphinx.Login.domElements.roleId.val($this.data('role-id') || 0);
             $this.addClass('active');
         });
     },
