@@ -34,6 +34,7 @@ else if (Model.GetType() == typeof(Fanex.Alpha.Before.Customer.Models.SignInResu
                 @RenderBody()
                 <input name="code" id="code" type="hidden" value="@Model.Captcha" />
                 <input id="detecas-analysis" name="detecas-analysis" value="{}" type="hidden" />
+                @Html.AntiForgeryToken()
             </form>
         </div>
 
