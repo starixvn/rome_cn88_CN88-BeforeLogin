@@ -107,7 +107,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Cryptography.Aes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Cryptography.Aes.1.0.0.0-beta02\lib\net461\Fanex.Cryptography.Aes.dll</HintPath>
+      <HintPath>..\packages\Fanex.Cryptography.Aes.1.0.0.0\lib\net461\Fanex.Cryptography.Aes.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Data, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -340,8 +340,15 @@
     <Content Include="assets\scripts\login\resources.js" />
     <Content Include="assets\scripts\raven.min.js" />
     <Content Include="assets\scripts\um\um.js" />
+    <Content Include="assets\styles\fonts\CN88\demo-files\demo.css" />
+    <Content Include="assets\styles\fonts\CN88\demo-files\demo.js" />
+    <Content Include="assets\styles\fonts\CN88\demo.html" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.svg" />
+    <Content Include="assets\styles\fonts\CN88\Read Me.txt" />
+    <Content Include="assets\styles\fonts\CN88\style.css" />
     <Content Include="assets\styles\images\crossword.png" />
     <Content Include="assets\styles\images\error3-bg.png" />
+    <Content Include="assets\styles\images\icon_UM.svg" />
     <Content Include="assets\styles\images\sprites.png" />
     <Content Include="assets\styles\images\sprites2.png" />
     <Content Include="assets\styles\images\sprites3.png" />
@@ -384,6 +391,7 @@
     </Content>
     <Content Include="assets\styles\themes\images\bg.jpg" />
     <Content Include="assets\styles\themes\images\bg2.jpg" />
+    <Content Include="assets\styles\images\icon_UM.png" />
     <Content Include="assets\styles\themes\images\sprites-theme.png" />
     <Content Include="assets\styles\themes\images\sprites-theme2.png" />
     <Content Include="assets\styles\vendors-extensions\login\bootstrap-ex.css">
@@ -668,6 +676,10 @@
     <Content Include="assets\styles\themes\default3.scss" />
     <Content Include="assets\styles\pages\um3.scss" />
     <Content Include="assets\styles\pages\error3.scss" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.eot" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.ttf" />
+    <Content Include="assets\styles\fonts\CN88\fonts\CN88.woff" />
+    <Content Include="assets\styles\fonts\CN88\selection.json" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

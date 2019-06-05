@@ -66,7 +66,7 @@
       <HintPath>..\packages\Fanex.Common.1.0.404.97\lib\net40\Fanex.Common.dll</HintPath>
     </Reference>
     <Reference Include="Fanex.Cryptography.Aes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Fanex.Cryptography.Aes.1.0.0.0-beta02\lib\net461\Fanex.Cryptography.Aes.dll</HintPath>
+      <HintPath>..\packages\Fanex.Cryptography.Aes.1.0.0.0\lib\net461\Fanex.Cryptography.Aes.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Fanex.Data, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
@@ -213,6 +213,7 @@
     <Compile Include="Configurations\AutomationTestSettings.cs" />
     <Compile Include="Configurations\CustomerAppSetting.cs" />
     <Compile Include="Configurations\LoginThemeSection.cs" />
+    <Compile Include="Constants\RoleIdConstants.cs" />
     <Compile Include="Constants\SignInErrorContants.cs" />
     <Compile Include="Controllers\SignInController.cs" />
     <Compile Include="GlobalSuppressions.cs" />

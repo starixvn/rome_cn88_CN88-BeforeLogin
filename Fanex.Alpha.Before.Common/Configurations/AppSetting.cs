@@ -10,6 +10,7 @@
         private static string googleAnalyticId;
         private static bool isMBCSite;
         private static readonly bool trackRunTime;
+        private static readonly bool isHeadline;
 
         static AppSetting()
         {
@@ -20,6 +21,7 @@
                 && ConfigurationManager.AppSettings["IsMBCSite"] == "1";
 
             trackRunTime = ConfigurationManager.AppSettings["TrackRunTime"] == "1";
+            isHeadline = ConfigurationManager.AppSettings["IsHeadline"] == "1";
         }
 
         public static string Version
@@ -57,5 +59,7 @@
         public static bool DisabledVietnamese => IsMBCSite;
 
         public static bool TrackRunTime => trackRunTime;
+
+        public static bool IsHeadline => isHeadline;
     }
 }

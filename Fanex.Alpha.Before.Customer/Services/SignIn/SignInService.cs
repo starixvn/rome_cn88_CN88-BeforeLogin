@@ -88,7 +88,8 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
             {
                 LoginTemplate = _loginTheme,
                 Ip = IPHelper.ClientIP(),
-                Username = string.Empty
+                Username = string.Empty,
+                LoginLevel = RoleIdConstants.Super
             };
 
             try
@@ -144,6 +145,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
         public SignInResult SignInWithRecaptcha(
             string username,
             string password,
+            byte roleId,
             string language,
             bool isValidCaptcha,
             string code,
@@ -154,7 +156,8 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
             {
                 Ip = IPHelper.ClientIP(),
                 LoginTemplate = _loginTheme,
-                Username = username
+                Username = username,
+                LoginLevel = roleId
             };
 
             try
@@ -237,7 +240,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
                     return signInResult;
                 }
 
-                VerifyDownlineLogin(username, password, deviceId, browserSize, signInResult);
+                VerifyDownlineLogin(username, password, roleId, deviceId, browserSize, signInResult);
             }
             catch (Exception ex)
             {
@@ -261,7 +264,13 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
         [SuppressMessage("StyleCop.CSharp.StylecopPlus.Rules",
             "SP2101:MethodMustNotContainMoreLinesThan",
             Justification = "Reviewed. Suppression is OK here.")]
-        public SignInResult AutomationTest(string username, string password, string captcha, string deviceId, string browserSize)
+        public SignInResult AutomationTest(
+            string username,
+            string password,
+            byte roleId,
+            string captcha,
+            string deviceId,
+            string browserSize)
         {
             var signInResult = new SignInResult
             {
@@ -300,7 +309,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
                     return signInResult;
                 }
 
-                VerifyDownlineLogin(username, password, deviceId, browserSize, signInResult);
+                VerifyDownlineLogin(username, password, roleId, deviceId, browserSize, signInResult);
             }
             catch (Exception ex)
             {
@@ -593,6 +602,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
         private void VerifyDownlineLogin(
             string username,
             string password,
+            byte roleId,
             string deviceId,
             string browserSize,
             SignInResult signInResult)
@@ -600,7 +610,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
             var requestInfo = DeviceHelper.GetRequestInfo(System.Web.HttpContext.Current.Request, browserSize);
             requestInfo.Add("sitegroup", UrlHelper.SiteGroupSetting.SiteGroup);
 
-            var verifySignInResult = _signInRepository.VerifyDownlineLogin(username, password, requestInfo);
+            var verifySignInResult = _signInRepository.VerifyDownlineLogin(username, password, roleId, requestInfo);
             if (verifySignInResult.ErrorCode == 0)
             {
                 UpdateResultAfterLoginSuccessfully(password, signInResult, verifySignInResult, deviceId, browserSize);

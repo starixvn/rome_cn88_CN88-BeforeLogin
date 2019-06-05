@@ -1,70 +1,162 @@
-﻿@font-face {
-  font-family: 'Roboto';  
-  src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'), 
-       url('../fonts/roboto/Roboto-Regular.woff') format('woff'),
-       url('../fonts/roboto/Roboto-Regular.ttf')  format('truetype'),
-}
-
-body, html {
-    height: 100%;
-}
-
-body {
-    font-family: Roboto, sans-serif;    
-    background: #f0f0f0;
-    color: #333;
-    font-size: 14px;
-
-    @media only screen and (min-device-width: 767px) {
-        font-size: 20px;
-    }
-}
-
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-    //padding-top: 10px;
-    text-align: center;
-    position: relative;
-
-    .img {
-        width: 100%;
-    }
-
-    @media only screen and (min-device-width: 768px) {
-        padding-top: 100px;
-        max-width: 800px;
-    }
-
-    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
-        padding-top: 0;
-    }
-}
-
-.title {
-    margin-top: 10px;
-    color: #67151b;
-    font-size: 36px;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    @media only screen and (max-device-width: 767px) and (orientation: landscape) {
-        margin-top: 0;
-    }
-}
-
-.time {
-    color: #67151b;
-}
-
-.caption {
-    padding-top: 17px;
-
-    @media only screen and (max-device-width: 767px) and (orientation: landscape) {
-        padding-top: 5px;
-    }
-}
-
-.caption p {
+﻿body {
+    font-family: Arial, Tahoma, sans-serif;    
+    color: #fff;
+    padding-top: 127px;
     margin: 0;
 }
+
+.main {
+    display: table;
+    margin: auto;
+
+    .icon-um {   
+        display: table-cell;
+        width: 196px;
+        height: 196px;
+        background: url(../images/icon_UM.png) no-repeat;
+    }
+
+    .content {
+        display: table-cell;
+        padding-left: 36px;        
+        vertical-align: middle;
+        text-align: left;
+        text-transform: uppercase;        
+        font-weight: bold;
+    }
+
+    .title-chinese {
+        margin: 5px 0 0;
+        font-size: 38px;
+        color: #705538;        
+    }
+
+    .title-english {
+        margin-top: 5px;
+        font-size: 22px;
+        color: #ac956b;
+    }
+}
+
+.footer {
+    margin-top: 98px;
+    background-color: #513f33;
+    font-size: 14px;
+
+    ul {
+        display: table;
+        margin: auto;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border-right: 1px solid #423328;
+            vertical-align: middle;
+            line-height: 24px;
+            color: #DDBF8A;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        .datetime {
+            margin-top: 20px;
+        }
+    }    
+}
+
+.copyright {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    text-align: center;
+    color: #836735;
+    font-size: 16px;
+}
+
+// For phone and tablet
+@media (max-device-width: 1024px) {
+    body {
+        padding-top: 8%;
+    }
+
+    .main {
+        .icon-um,
+        .content {
+            display: block;
+        }
+
+        .icon-um {
+            width: 90px;
+            height: 90px;
+            margin: 20px auto 20px;
+            background-image: url(../images/icon_UM.svg);        
+        }
+
+        .content {
+            padding-left: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+
+        .title-english {
+            font-size: 18px;
+        }
+
+        .title-chinese {
+            margin-top: 0;
+            font-size: 34px;
+        }
+    }
+
+    .footer {
+        margin-top: 98px;
+
+        
+         ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            .datetime {
+                margin-top: 18px;
+            }
+        }
+
+        ul li {
+            display: block;
+            padding: 0 16px;
+            border-bottom: 1px solid #423328;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+
+@media (max-device-height: 812px) {
+    body {
+        padding-top: 4%;
+    }
+
+    .footer {
+        margin-top: 20px;
+    }
+}
+
+
+// Desktop
+@media (min-device-width: 1280px) {
+    .footer ul li {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+

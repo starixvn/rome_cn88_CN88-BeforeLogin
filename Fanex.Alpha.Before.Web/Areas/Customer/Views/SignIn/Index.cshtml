@@ -1,5 +1,5 @@
 ﻿@using CaptchaMvc.HtmlHelpers;
-
+@using Fanex.Alpha.Before.Customer.Constants
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -28,21 +28,29 @@
     </div>
 </div>
 
-<h1 class="title login-text">Login</h1>
+@*<h1 class="title login-text">Login</h1>*@
 
-@if (Model.ErrCode != -1)
-{
-    <div class="rowlg msg-error" errCode="@Model.ErrCode" id="errmsg">@Model.ErrMsg</div>
-}
-
-<div class="rowlg">
-    <input type="text" class="txt" placeholder="Username" id="txtUserName" name="txtUserName" tabindex="1" />
-    <i class="icon-user"></i>
+<div id="loginLevel" class="title-group">
+    @if (!AppSetting.IsHeadline)
+    {
+        <span id="login-1" @(Model.LoginLevel == RoleIdConstants.Super ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Super">Login 1</span>
+        <span id="login-2" @(Model.LoginLevel == RoleIdConstants.Master ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Master">Login 2</span>
+        <span id="login-3" @(Model.LoginLevel == RoleIdConstants.Agent ? "class=active" : string.Empty) data-role-id="@RoleIdConstants.Agent">Login 3</span>
+    }
+    <input type="hidden" id="roleId" name="roleId" value="@Model.LoginLevel" />
+    <input type="hidden" id="isHeadline" value="@(AppSetting.IsHeadline ? 1 : 0)" />
 </div>
 
-<div class="rowlg">
-    <input type="password" class="txt" placeholder="Password" id="txtPassWord" name="txtPassWord" tabindex="2" autocomplete="off" />
-    <i class="icon-lock"></i>
+<div class="form-field">
+    <div class="rowlg">
+        <input type="text" class="txt" placeholder="Username" id="txtUserName" name="txtUserName" tabindex="1" />
+        <i class="icon-user"></i>
+    </div>
+
+    <div class="rowlg">
+        <input type="password" class="txt" placeholder="Password" id="txtPassWord" name="txtPassWord" tabindex="2" autocomplete="off" />
+        <i class="icon-lock"></i>
+    </div>
 </div>
 
 <div class="rowlg checkbox">
@@ -62,6 +70,11 @@
     <input type="button" class="btnLogin" value="Login" id="btnLogin" tabindex="5" />
 </div>
 
+@if (Model.ErrCode != -1)
+{
+    <div class="rowlg msg-error" errCode="@Model.ErrCode" id="errmsg">@Model.ErrMsg</div>
+}
+
 @if (ViewBag.ShowReCaptcha == true)
 {
     @section scripts
@@ -69,5 +82,3 @@
         <script src="~/assets/bundles/captcha.js?ver=@Fanex.Alpha.Before.Common.Configurations.AppSetting.Version" type="text/javascript"></script>
     }
 }
-
-
