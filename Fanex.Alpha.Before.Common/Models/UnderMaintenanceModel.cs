@@ -23,6 +23,11 @@
 
         public bool IsUM { get; }
 
+        public string UMDateText
+            => TimeZoneInfo.ConvertTime(
+                DateTime.Now,
+                TimeZoneInfo.FindSystemTimeZoneById("China Standard Time")).ToString("yyyy-MM-dd");
+
         public string FromTimeText { get; }
 
         public string ToTimeText { get; }

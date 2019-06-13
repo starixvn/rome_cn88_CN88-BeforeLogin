@@ -1,16 +1,13 @@
 ﻿@model UnderMaintenanceModel
-@{ 
+@{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>UM Page</title>
     <meta charset="utf-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-
     <link href="~/assets/bundles/themes/um.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -26,15 +23,15 @@
             <ul>
                 <li>
                     <p>在此期间您将无法登入所有网页。<br /> 造成您的不便，我们深感抱歉。</p>
-                    <p class="datetime">服務中斷期間 - 2019-02-21 <br />@Model.FromTimeText ~ @Model.ToTimeText (北京時間)</p>
+                    <p class="datetime">服務中斷期間 - @Model.UMDateText <br />@Model.FromTimeText ~ @Model.ToTimeText (北京時間)</p>
                 </li>
                 <li>
                     <p>在此期間您將無法登入所有網頁。<br /> 造成您的不便，我們深感抱歉。</p>
-                    <p class="datetime">服务中断期间 - 2019-02-21 <br />@Model.FromTimeText ~ @Model.ToTimeText (北京时间)</p>
+                    <p class="datetime">服务中断期间 - @Model.UMDateText <br />@Model.FromTimeText ~ @Model.ToTimeText (北京时间)</p>
                 </li>
                 <li>
                     <p>Our website is inaccessible in this time period. <br /> We apologize for the inconvenience caused.</p>
-                    <p class="datetime">Service Disruption Period - 2019-02-21 <br />@Model.FromTimeText ~ @Model.ToTimeText (GMT+8)</p>
+                    <p class="datetime">Service Disruption Period - @Model.UMDateText <br />@Model.FromTimeText ~ @Model.ToTimeText (GMT+8)</p>
                 </li>
             </ul>
         </div>
@@ -50,4 +47,3 @@
     }
 </body>
 </html>
-
