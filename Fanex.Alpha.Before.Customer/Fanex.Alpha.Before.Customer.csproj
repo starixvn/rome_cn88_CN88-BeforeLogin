@@ -46,18 +46,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\_Dependencies\Captcha\CaptchaMvc.dll</HintPath>
     </Reference>
-    <Reference Include="CasinoLibrary, Version=1.0.2.14, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CasinoLibrary.1.0.2.17\lib\net40\CasinoLibrary.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CasinoSetting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CasinoLibrary.1.0.2.17\lib\net40\CasinoSetting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CasinoUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CasinoLibrary.1.0.2.17\lib\net40\CasinoUtility.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
       <Private>True</Private>
@@ -84,15 +72,8 @@
     <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.6\lib\net40\Fanex.Logging.Extensions.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Fanex.Oneyed.RobotTrap">
-      <HintPath>..\_Dependencies\FPS\Fanex.Oneyed.RobotTrap.dll</HintPath>
-    </Reference>
     <Reference Include="FPS.Client">
       <HintPath>..\packages\Fanex.Oneyed.FPSClient.1.0.0\FPS.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="HandHistoryLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CasinoLibrary.1.0.2.17\lib\net40\HandHistoryLibrary.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="IBCCrypt">
       <HintPath>..\_Dependencies\3rd\Casino\IBCCrypt.dll</HintPath>
@@ -111,10 +92,6 @@
     </Reference>
     <Reference Include="ILogger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ILogger.1.0.0.0\lib\net40\ILogger.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
-      <HintPath>..\packages\log4net.1.2.9.1\lib\net40\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
