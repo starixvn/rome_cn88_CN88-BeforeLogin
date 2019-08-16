@@ -400,7 +400,6 @@
     <Content Include="Configurations\Local.Dev.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\Local.Dev.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\Local.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
-    <Content Include="Configurations\Master.StoreProcedure\DBCUST.IPDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\MNL.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -411,16 +410,12 @@
     <Content Include="assets\scripts\login\login.js" />
     <Content Include="assets\scripts\login\place-holder.js" />
     <Content Include="Configurations\Local.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml" />
-    <Content Include="Configurations\Master.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\PRO.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml" />
     <Content Include="Configurations\UAT.StoreProcedure\DBCust.CustDB.BODBDownlineNet.xml">
       <SubType>
       </SubType>
     </Content>
     <Content Include="Configurations\WebDeployment.ConfigTransform\Local.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.Web.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.ConnectionStrings.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.Web.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.Web.Setting.config" />
@@ -455,7 +450,6 @@
     <Content Include="Views\Common\LimitedCountryAccess\Style\Font\Roboto\Roboto-Medium.ttf" />
     <Content Include="Views\Common\LimitedCountryAccess\Style\Font\Roboto\Roboto-Regular.ttf" />
     <Content Include="Views\Common\LimitedCountryAccess\Style\LimitedCountryAccess.less" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.LimtedCountryAccessSection.config" />
     <Content Include="LimtedCountryAccessSection.config">
       <SubType>Designer</SubType>
     </Content>
@@ -467,7 +461,6 @@
     <Content Include="Configurations\WebDeployment.ConfigTransform\Local.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PRO.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\UAT.DomainGroupSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\Master.DomainGroupSection.config" />
     <Content Include="Areas\Customer\Web.config" />
     <Content Include="Areas\Customer\Views\SignIn\Transfer.cshtml" />
     <Content Include="IbcKeys\ibckey.snk" />
@@ -674,10 +667,6 @@
     <Content Include="Views\Common\UnderMaintenance\Index3.cshtml" />
     <Content Include="Views\Common\ErrorPage\Index3.cshtml" />
     <Content Include="Fanex.Alpha.Before.Web.ruleset" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.DomainGroupSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.Web.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmaster.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.ConnectionStrings.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.LimtedCountryAccessSection.config" />
@@ -685,11 +674,6 @@
     <Content Include="Configurations\WebDeployment.ConfigTransform\LocalCN88.Web.Setting.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.DomainGroupSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.LimtedCountryAccessSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\MasterCN88.Web.Setting.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.ConnectionStrings.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.DomainGroupSection.config" />
     <Content Include="Configurations\WebDeployment.ConfigTransform\PROCN88.LimtedCountryAccessSection.config" />
@@ -709,10 +693,6 @@
     <Content Include="Configurations\WebDeployment.ConfigTransform\UATCN88.Web.Setting.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.ConnectionStrings.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.DomainGroupSection.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.config" />
-    <Content Include="Configurations\WebDeployment.ConfigTransform\UATmasterCN88.Web.Setting.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
