@@ -72,8 +72,9 @@
     <Reference Include="Fanex.Logging.Extensions.Web, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fanex.Logging.Extensions.Web.1.0.6\lib\net40\Fanex.Logging.Extensions.Web.dll</HintPath>
     </Reference>
-    <Reference Include="FPS.Client">
-      <HintPath>..\packages\Fanex.Oneyed.FPSClient.1.0.0\FPS.Client.dll</HintPath>
+    <Reference Include="FPS.Client, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fanex.Oneyed.FPSClient.3.3.1.0\lib\FPS.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="IBCCrypt">
       <HintPath>..\_Dependencies\3rd\Casino\IBCCrypt.dll</HintPath>
