@@ -36,9 +36,20 @@ else if (Model.GetType() == typeof(Fanex.Alpha.Before.Customer.Models.SignInResu
                 <input id="detecas-analysis" name="detecas-analysis" value="{}" type="hidden" />
                 @Html.AntiForgeryToken()
             </form>
-            <div class="banner">
-                <img src="~/assets/styles/images/banner/MidAutumn2019/en-US.jpg" alt="Mid-Autumn Festival" />
-            </div>
+            @if (DateTime.Now <= new DateTime(2019, 9, 15, 23, 59, 59))
+            {
+                <div class="banner">
+                    <img id="seasonEvent" alt="" />
+                </div>
+                <script>
+                    var seasonEvents = {
+                        isExpired: @(DateTime.Now > new DateTime(2019, 9, 15, 23, 59, 59) ? 1 : 0),
+                        en: '@Url.Content("~/assets/styles/images/banner/MidAutumn2019/en-US.jpg")',
+                        hans: '@Url.Content("~/assets/styles/images/banner/MidAutumn2019/zh-Hans.jpg")',
+                        tw: '@Url.Content("~/assets/styles/images/banner/MidAutumn2019/zh-TW.jpg")'
+                    };
+                </script>
+            }
         </div>
 
         @if (Model.IsChangedPassword)
@@ -57,7 +68,6 @@ else if (Model.GetType() == typeof(Fanex.Alpha.Before.Customer.Models.SignInResu
         @Html.Partial("GoogleAnalytic", CommonAppSetting.GoogleAnalyticId)
 
         @Html.Raw(Fanex.Logging.LogManager.RenderJavascriptLogger())
-
     </body>
 </html>
 }

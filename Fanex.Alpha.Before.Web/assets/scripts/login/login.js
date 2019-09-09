@@ -185,7 +185,22 @@ Sphinx.Login = {
         Sphinx.Core.setUserData('LANGUAGE', languageCode);
         Sphinx.Login.currentLanguageCode = languageCode;
 
+        if (seasonEvents && !seasonEvents.isExpired) {
+            document.getElementById('seasonEvent').src = this.getSeasonEvent(languageCode);
+        }
+
         $(document).trigger("Sphinx.Login.LanguageChanged", [languageCode]);
+    },
+
+    getSeasonEvent: function (lang) {
+        switch (lang) {
+            case 'en-US':
+                return seasonEvents.en;
+            case 'zh-TW':
+                return seasonEvents.tw;
+            default:
+                return seasonEvents.hans;
+        }
     },
 
     showPassword: function () {
