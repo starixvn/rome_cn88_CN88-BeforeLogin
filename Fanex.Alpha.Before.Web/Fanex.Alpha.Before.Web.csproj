@@ -326,6 +326,9 @@
     <Content Include="assets\styles\fonts\CN88\fonts\CN88.svg" />
     <Content Include="assets\styles\fonts\CN88\Read Me.txt" />
     <Content Include="assets\styles\fonts\CN88\style.css" />
+    <Content Include="assets\styles\images\banner\MidAutumn2019\en-US.jpg" />
+    <Content Include="assets\styles\images\banner\MidAutumn2019\zh-Hans.jpg" />
+    <Content Include="assets\styles\images\banner\MidAutumn2019\zh-TW.jpg" />
     <Content Include="assets\styles\images\crossword.png" />
     <Content Include="assets\styles\images\error3-bg.png" />
     <Content Include="assets\styles\images\icon_UM.svg" />
@@ -694,6 +697,7 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
