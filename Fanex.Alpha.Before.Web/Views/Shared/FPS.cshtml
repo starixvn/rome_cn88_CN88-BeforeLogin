@@ -3,7 +3,6 @@
 @{
     Layout = null;
 }
-
 @Html.Hidden("ModelErrCode", Model.ErrCode)
 @Html.Hidden("ModelErrMsg", Html.Raw(Model.ErrMsg))
 @Html.Hidden("ModelLanguage", Model.Language)
@@ -13,7 +12,6 @@
 @Html.Hidden("ModelCaptcha", Model.Captcha)
 @Html.Hidden("CommonAppSettingFpsActivator", CommonAppSetting.FpsActivator)
 @Html.Hidden("RootUrl", Url.Content("~"))
-
 <script type="text/javascript">
     var detecasAnalysis = document.getElementById("detecas-analysis");
     detecasAnalysis ? (detecasAnalysis.value = '{"startTime":1446686616296,"version":"0.0.0","enable":true}') : false;
@@ -41,8 +39,7 @@
     window.rootUrl = document.getElementById("RootUrl").value;
 
 
-    $(function () {        
-
+    $(function () {
         (function (json, base64) {
 
             function getDeviceId() {
@@ -72,7 +69,7 @@
 
     !function (e, t, a, c, n) {
         var s = t.createElement(a),
-        o = t.getElementsByTagName(c)[0];
+            o = t.getElementsByTagName(c)[0];
         s.async = true, s.defer = true, s.src = n, o.appendChild(s)
     }(window, document, "script", "body", document.getElementById("CommonAppSettingFpsActivator").value);
 
