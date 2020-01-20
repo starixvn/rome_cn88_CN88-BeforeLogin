@@ -124,8 +124,7 @@
     <value>帐号或密碼錯誤</value>
   </data>
   <data name="iploginfailedmultipletimeserror" xml:space="preserve">
-    <value>Your IP exceeded the maximum number ({0} times) of attempts to authenticate with your credentials.
-For security reasons, this feature has been locked for {1} minutes</value>
+    <value>您的IP已超過憑證驗證次數限制({0}次)。基於安全顧慮，將鎖定此功能{1}分鐘。</value>
   </data>
   <data name="lblLoginSuccessful" xml:space="preserve">
     <value>Login Successfully</value>
