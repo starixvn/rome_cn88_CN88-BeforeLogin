@@ -160,6 +160,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
 
             try
             {
+                AssignSettingLanguage(language);
                 AppSession.EncryptCode = code;
 
                 //// Login Failed Count > 15
@@ -205,7 +206,6 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
                     ResetCurrentLoginFailed();
                 }
 
-                AssignSettingLanguage(language);
                 if (string.IsNullOrEmpty(AppSession.EncryptCode))
                 {
                     signInResult.ErrCode = SignInErrorContants.ErrorInvalidCaptcha;
