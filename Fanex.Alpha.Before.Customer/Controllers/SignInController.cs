@@ -52,6 +52,7 @@ namespace Fanex.Alpha.Before.Customer.Controllers
             }
 
             var loginResult = _signInService.SignIn();
+            ViewBag.FPSToken = FPS.Client.Token.Generate();
 
             return View(viewPath, loginResult);
         }
@@ -77,6 +78,7 @@ namespace Fanex.Alpha.Before.Customer.Controllers
             string browserSize,
             string deviceId = "N/A")
         {
+            ViewBag.FPSToken = FPS.Client.Token.Generate();
             bool validCaptcha = false;
             if (_signInService.IsShowReCaptcha())
             {
