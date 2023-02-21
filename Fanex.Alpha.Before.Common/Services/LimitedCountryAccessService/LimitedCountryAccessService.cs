@@ -1,15 +1,15 @@
-﻿namespace Fanex.Alpha.Before.Common.Services.LimitedCountryAccessService
-{
-    using Criteria.LimitedCountryAccess;
-    using Logging.Extensions.Web;
-    using Models;
-    using Repositories.LimitedCountryAccess;
-    using Services;
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
+﻿using Fanex.Alpha.Before.Common.Criteria.LimitedCountryAccess;
+using Fanex.Alpha.Before.Common.Models;
+using Fanex.Alpha.Before.Common.Repositories.LimitedCountryAccess;
+using Fanex.Caching;
+using Fanex.Logging.Extensions.Web;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
+namespace Fanex.Alpha.Before.Common.Services.LimitedCountryAccessService
+{
     public class LimitedCountryAccessService : ILimitedCountryAccessService
     {
         private const string RestrictedIPRangesCachedKey = "Fanex.Alpha.Before.Common.RestrictedIPRangesCachedKey_IPV";
@@ -32,7 +32,7 @@
         {
             this.ipRepository = ipRepository ?? new LimitedCountryAccessRepository();
             this.ipService = ipService ?? new IpServiceImpl();
-            this.cacheService = cacheService ?? new CacheServiceImpl();
+            this.cacheService = cacheService ?? new CacheService();
             this.limitedCountriesConfigService = limitedCountriesConfigService ?? new LimitedCountriesConfigService();
             this.logInfoAction = logInfoAction ?? HandleInfoException;
             this.trackRunTime = trackRunTime;
@@ -103,14 +103,20 @@
                 () => trackRunTime
                     ? FunctionRecorder.RunFunctionAndTrackTime(getDataFromDatabaseFunc, cacheKey)
                     : getDataFromDatabaseFunc(),
-                TimeSpan.FromDays(30));
+                new CacheItemOptions
+                {
+                    RelativeExpiration = TimeSpan.FromDays(30)
+                });
         }
 
         public IList<string> GetsAllowedAccessIPs()
             => cacheService.GetOrSet(
                 AllowedAccessIPsCachedKey,
                 () => ipRepository.GetsAllowedAccessIPs(new GetAllowedAccessIPsCriteria()),
-                TimeSpan.FromMinutes(10));
+                 new CacheItemOptions
+                 {
+                     RelativeExpiration = TimeSpan.FromMinutes(10)
+                 });
 
         private static bool IsTestedIP(IEnumerable<LimitedCountriesConfigModel> activeLimitedCountriesConfig, string clientIP)
             => activeLimitedCountriesConfig.Any(m

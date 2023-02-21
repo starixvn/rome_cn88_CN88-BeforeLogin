@@ -5,7 +5,6 @@ using Fanex.Logging.RabbitMQ;
 using Fanex.Logging.Sentry.RavenClient;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Web;
 
 namespace Fanex.Alpha.Before.Common.App_Start
 {

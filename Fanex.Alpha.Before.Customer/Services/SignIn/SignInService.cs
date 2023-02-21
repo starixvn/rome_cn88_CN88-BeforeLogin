@@ -321,7 +321,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
 
         public bool IsShowReCaptcha()
         {
-            return CacheExtension.Get<int>(this._currentLoginFailedSessionKey) >= this._loginFailTimeToStartUsingCaptcha;
+            return CacheExtension.Get<int>(this._currentLoginFailedSessionKey,0) >= this._loginFailTimeToStartUsingCaptcha;
         }   
 
         /// <summary>
@@ -333,7 +333,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
             int count = 0;
             try
             {
-                count = CacheExtension.Get<int>(_totalLoginFailedSessionKey);
+                count = CacheExtension.Get<int>(_totalLoginFailedSessionKey,0);
             }
             catch (Exception ex)
             {
@@ -352,7 +352,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
             int count = 0;
             try
             {
-                count = CacheExtension.Get<int>(_currentLoginFailedSessionKey);
+                count = CacheExtension.Get<int>(_currentLoginFailedSessionKey,0);
             }
             catch (Exception ex)
             {
@@ -371,9 +371,9 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
             DateTime date = DateTime.MinValue;
             try
             {
-                if (CacheExtension.Get(_latestLoginFailSessionKey) != null)
+                if (CacheExtension.Get(_latestLoginFailSessionKey,0) >0)
                 {
-                    date = Converter.ToDateTime(CacheExtension.Get(_latestLoginFailSessionKey));
+                    date = Converter.ToDateTime(CacheExtension.Get(_latestLoginFailSessionKey,0));
                 }
             }
             catch (Exception ex)
@@ -451,7 +451,7 @@ namespace Fanex.Alpha.Before.Customer.Services.SignIn
         {
             try
             {
-                return CacheExtension.Get<string>(this._lastLoginUserNameSessionKey);
+                return CacheExtension.Get<string>(this._lastLoginUserNameSessionKey, string.Empty);
             }
             catch (Exception ex)
             {
